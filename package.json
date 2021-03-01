@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rennerborges/clean-code-api/issues"
   },
-  "homepage": "https://github.com/rennerborges/clean-code-api#readme"
+  "homepage": "https://github.com/rennerborges/clean-code-api#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.0.0"
+  }
 }
