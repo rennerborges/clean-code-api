@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/return-await */
 import { AddAccount, AddAccountModel } from '../../../domain/usecases/add-account'
 import { AccountModel } from '../../../domain/models/account'
 import { Encrypter } from '../../protocols/encryper'
@@ -11,6 +12,12 @@ export class DbAddAccount implements AddAccount {
 
   async add (account: AddAccountModel): Promise<AccountModel> {
     await this.encrypter.encrypt(account.password)
-    return new Promise(resolve => resolve(null))
+    const dataResponse = {
+      id: 'valid_id',
+      name: 'valid_name',
+      email: 'valid_email',
+      password: 'valid_password'
+    }
+    return new Promise(resolve => resolve(dataResponse))
   }
 }
